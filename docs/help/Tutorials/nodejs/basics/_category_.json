@@ -1,0 +1,8 @@
+{
+  "label": "Detailed Tutorials",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Checkout some of the Concepts of NoPE"
+  }
+}

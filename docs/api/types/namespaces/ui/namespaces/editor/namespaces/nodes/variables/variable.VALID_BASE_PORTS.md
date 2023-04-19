@@ -1,0 +1,5 @@
+# Variable: VALID_BASE_PORTS
+
+```ts
+VALID_BASE_PORTS: VALID_BASE_PORTS[]
+```

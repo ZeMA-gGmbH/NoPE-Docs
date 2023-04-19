@@ -1,0 +1,5 @@
+# Variable: VALID_FLOW_PORTS
+
+```ts
+VALID_FLOW_PORTS: VALID_FLOW_PORTS[]
+```
