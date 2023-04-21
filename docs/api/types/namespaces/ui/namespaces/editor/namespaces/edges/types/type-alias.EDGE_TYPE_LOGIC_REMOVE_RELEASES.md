@@ -1,5 +1,0 @@
-# Type alias: EDGE_TYPE_LOGIC_REMOVE_RELEASES
-
-```ts
-EDGE_TYPE_LOGIC_REMOVE_RELEASES: "logic:lock";
-```
