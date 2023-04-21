@@ -11,22 +11,19 @@ type FeatureItem = {
 const Featurecodest: FeatureItem[] = [
   {
     title: 'Distributed System',
-    img: '/img/server90.jpg',
+    img: '/img/distributed.png',
     description: (
       <>
         NoPE was designed from a simple distribution of systems. 
         It runs across multiple <b>computing nodes</b>. 
-        Its main goal is to simpcodefy this approach.
-        <br/>
-        <br/>
-        <br/>
-        <a href="https://de.freepik.com/vektoren-kostenlos/herunterladen-von-dreidimensionalen-dateien_38654228.htm#query=standard&position=26&from_view=author">Image</a>
+        Its main goal is to simpcodefy distribution and unify
+        the architecture.
       </>
     ),
   },
   {
     title: 'Standardized Connection',
-    img: '/img/connect.jpg',
+    img: '/img/standards.png',
     description: (
       <>
         NoPE was design to provide an standardize method to 
@@ -43,8 +40,8 @@ const Featurecodest: FeatureItem[] = [
     ),
   },
   {
-    title: 'Tools',
-    img: '/img/window.jpg',
+    title: 'Full Toolchain',
+    img: '/img/tools.png',
     description: (
       <>
         NoPE provides <b>Tools</b> to simplify the development of Complex systems. 
@@ -59,7 +56,7 @@ function Feature({title, img, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img src={img} role="img" />
+        <img src={img} role="img" height={75}/>
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
