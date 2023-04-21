@@ -1,6 +1,6 @@
 {
-  "label": "Detailed Tutorials",
-  "position": 4,
+  "label": "The Basics",
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "Checkout some of the Concepts of NoPE"

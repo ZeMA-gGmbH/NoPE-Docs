@@ -1,19 +1,12 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
-# Use `NoPE` in Programms
 
-## Optional: Create a Project:
-
-To create a project folder with `NoPE` checkout our [tutorial](/docs/tutorial-nodejs/nope-5-min#1-create-a-nodejs-project), otherwise ensure the `NoPE`-Package is installed:
-
-```bash
-npm install nope-js-node
-```
-
-## The Dispatcher:
+# 4. Create a Dispatcher
 
 To implement the functionalities of `NoPE`,  `NoPE` creates so called runtime environments. Inside of such a environment the system uses a so-called 'NoPE dispatcher' as a central element.
+
+## The Dispatcher:
 
 The NoPE dispatcher is designed as a layer between the different modules and other runtimes (these might exist based on the distribution of the system). The dispatcher enables distributed computing and creates simply micro kernel architecture. A dispatcher is used to connect the modules, share data and events and provide a remote procedure call (rpc) interface.
 
@@ -23,7 +16,7 @@ According to the **SOLID** principle, the dispatcher uses the following componen
 
 | Element | Description and Responsibility |
 |-|-|
-| `connectivityManager` | connects to other dispatchers and manages the status of the other dispatchers. It checks their status and removes dead dispatchers (`dead` = no connection is active). It detects new dispatchers. |
+| [`connectivityManager`](./05-connectivity-manager.md) | connects to other dispatchers and manages the status of the other dispatchers. It checks their status and removes dead dispatchers (`dead` = no connection is active). It detects new dispatchers. |
 | `eventDistributor` | distributes events over the network (or internally). You can use this element to wait for specific events. Subscription to these events allows `mqtt` patterns. Additionally, you can emit events on specific topics or pattern-based topics ;-).
 | `dataDistributor` | passes data over the network (or internally). Unlike events, data is persistent and available at any time. You can use this submodule to wait for specific data changes (install data hooks), pull specific data, or push data. You can retrieve / push data with a path based on `mqtt` patterns. |
 | `rpcManager` | Used to perform `remote procedure calls` (see [here](https://de.wikipedia.org/wiki/Remote_Procedure_Call)). The manager keeps track of available services. The submodule registers or removes (new) services. |
@@ -31,11 +24,7 @@ According to the **SOLID** principle, the dispatcher uses the following componen
 
 To interact with `NoPE` it is usefull to work with a Dispatcher. 
 
-
-## Create a Dispatcher
-
 To start exploring the capabilities of the dispatcher we will firstly create a dispatcher with the code below:
-
 
 ```typescript
 // First lets import nope.
@@ -90,6 +79,48 @@ The relevant Settings are described by the `INopeDispatcherOptions`. This option
     * `host`: a dispatcher on the defined host.
     * `cpu-usage`: the dispatcher with the least CPU usage
     * `free-ram`: The dispatcher with the lowest RAM usage
+
+### `runNopeBackend`-function:
+
+Instead of the `getDispatcher` we can although use the `runNopeBackend`
+
+```typescript
+const loader = await nope.runNopeBackend({
+  timings: {
+    checkInterval: 0,
+    sendAliveInterval: 0
+  },
+  log: "error",
+  skipLoadingConfig: true
+});
+
+// The loader exposes a dispatcher:
+const dispatcher = loader.dispatcher;
+```
+
+### Why should I use the `runNopeBackend`-function?
+
+The `runNopeBackend` returns a `NopePackageLoader`. The package loader is used to manage available packages (exports available to other runtimes). Therefore, the `NoPE` package loader is able to import so-called `NoPE` packages. (In the backend, it can read in `javascript` files with the package definitions at runtime; in the frontend, the packages must be loaded directly and are made available to the manager via a method). 
+
+The `NoPE package loader` can be interacted with via the following methods and properties:
+- `reset`: Resets the PackageLoader. I.e. all known packages are removed. Instance or similar are **not** deleted.
+- `addDescription`: With this method classes can be explicitly added at runtime. This may be necessary if a class was created dynamically. 
+- `addPackage`: Functionality to add a complete package. This will cause the included services to be hosted and constructors for the shared classes to be provided.
+- `generateInstances`: Creates the defined instances of the packages. In doing so, this information is overridden by the configuration file.
+
+The following function is also available in the backend:
+- `loadPackageFile`: Enables dynamic loading of a configuration file.
+
+#### `NoPE` package
+
+A `NoPE` package contains for this purpose:
+- The identifier of the package (name)
+- A list of packages on which the package depends.
+- A list of provided classes of the package. (see `IClassDescription`)
+- A list with the provided services of the package.
+- A definition of the default instances to be created. This will be overridden by the configuration file.
+- A definition of auto-start functions of instances. This will be overridden by the configuration file.
+
 
 ## Wait for the Dispatcher
 

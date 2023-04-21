@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Observables
+# 3. Observables
 
 Observables implent the default `Observer` Pattern. Checkout [wikipedia](https://en.wikipedia.org/wiki/Observer_pattern) for a short overview of the pattern. 
 
@@ -23,7 +23,7 @@ Afterward we are able to create our first Observable.
 const obs = new nope.observables.NopeObservable<number>()
 ```
 
-### `setContent`: Change the content of the Observable.
+## `setContent`: Change the content of the Observable.
 
 To change the content of an observable use the method `setContent`.
 
@@ -40,7 +40,7 @@ This will print:
     current value = 5
     
 
-#### `setter`: Define a specific setter for the observable.
+## `setter`: Define a specific setter for the observable.
 
 You can specify a specifc getter for the observable for instance, to limit the number to the following constrains `> 0` and `< 10`.
 
@@ -114,7 +114,7 @@ This will print:
 
 To remove such a getter just set the getter property to `null`.
 
-### `getContent`: Get the current content of the Observable.
+## `getContent`: Get the current content of the Observable.
 To extract the content of our observable, we are able to use the function `getContent`
 
 
@@ -130,7 +130,7 @@ This will print:
 
 If no data is assigned, this will result in `undefined`. Otherwise the current data is returned.
 
-#### `getter`: Define a specific getter for the observable.
+## `getter`: Define a specific getter for the observable.
 
 You can specify a specifc getter for the observable for instance, to allways return a `string`
 
@@ -162,7 +162,7 @@ This will print:
     current value (after removing the getter) = 1337
     
 
-# Subscriptions
+## Subscriptions
 
 You can use an observable to get informed about changes:
 
@@ -201,4 +201,17 @@ This code results in:
     options.skipCurrent = False. Value is now: new-value-2
     options.skipCurrent = True. Value is now: new-value-2
 
+
+## Comparing EventEmitters and Observables
+
+As you perhaps has already noticed there is overlapping feature set between `EventEmitters` and `Observables`. But what is the main difference?
+
+1. **EventEmitters**:
+    - If you subscribe to *EventEmitters* you will only get informed, when the next event is emitted.
+    - You **can't** determine the last event that was published, before you subscribe
+    - **Events** exists just during emitting, afterwards there is no **event**
+2. **Observables**:
+    - If you subscribe to *Observables* you will received the current value immediately.
+    - You can extract the data of an observable using the `getContent` method, without subscribing to the data.
+    - In an object orientated approach, observables match properties of instances.
 

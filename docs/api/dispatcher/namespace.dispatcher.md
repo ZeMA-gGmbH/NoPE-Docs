@@ -28,7 +28,7 @@ To start exploring the capabilities of the dispatcher we will firstly create a d
 
 ```javascript
 // First lets install nope using npm
-const nope = require("../dist-nodejs/index.nodejs");
+const nope = require("nope-js-node");
 
 // Lets create our dispatcher
 const dispatcher = nope.dispatcher.getDispatcher({

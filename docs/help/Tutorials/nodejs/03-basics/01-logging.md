@@ -1,13 +1,13 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 
-# Event Emitters
-
-## The Basics in distributed systems
+# 1. Logging
 
 It may becomes hard to debug applications running in a distributed manner. Make shure you use alot of debugging!
+
+## The Basics in distributed systems
 
 `NoPE` provides a Basic logging concept for this purpose. Lets figure it out by a Handson Example.
 
@@ -18,7 +18,7 @@ It may becomes hard to debug applications running in a distributed manner. Make 
 
 ```javascript
 // First lets install nope using npm
-const nope = require("../dist-nodejs/index.nodejs");
+const nope = require("nope-js-node");
 
 // Create our Observable:
 const logger = nope.getNopeLogger("demo");

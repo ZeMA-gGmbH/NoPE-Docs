@@ -34,7 +34,7 @@ In the backend (`nodejs`) you can use the [useLogFile](functions/function.useLog
 
 ```javascript
 // First lets install nope using npm
-const nope = require("../dist-nodejs/index.nodejs");
+const nope = require("nope-js-node");
 
 // Create our Observable:
 const logger = nope.getNopeLogger("demo");

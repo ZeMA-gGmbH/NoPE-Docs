@@ -35,7 +35,7 @@ Because we asume, that **NoPE** is running on different computing nodes, we have
 
 ```javascript
 // First lets install nope using npm
-const nope = require("../dist-nodejs/index.nodejs");
+const nope = require("nope-js-node");
 
 // Create a communicator:
 // We will use the event layer (which just runs internally)
