@@ -11,7 +11,7 @@ type FeatureItem = {
 const Featurecodest: FeatureItem[] = [
   {
     title: 'Distributed System',
-    img: '/img/distributed.png',
+    img: 'img/distributed.png',
     description: (
       <>
         NoPE was designed from a simple distribution of systems. 
@@ -23,7 +23,7 @@ const Featurecodest: FeatureItem[] = [
   },
   {
     title: 'Standardized Connection',
-    img: '/img/standards.png',
+    img: 'img/standards.png',
     description: (
       <>
         NoPE was design to provide an standardize method to 
@@ -41,7 +41,7 @@ const Featurecodest: FeatureItem[] = [
   },
   {
     title: 'Full Toolchain',
-    img: '/img/tools.png',
+    img: 'img/tools.png',
     description: (
       <>
         NoPE provides <b>Tools</b> to simplify the development of Complex systems. 

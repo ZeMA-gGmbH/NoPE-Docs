@@ -37,4 +37,5 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deploy as Github-Page
 
-After running the ***build*** command add everything and push it.
+After running the ***build*** command, copy the content of the build dir to gh-pages dir add everything and push it.
+
