@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkopensource_website=self.webpackChunkopensource_website||[]).push([[4075],{4099:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/changes","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
