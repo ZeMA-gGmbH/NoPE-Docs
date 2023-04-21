@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkopensource_website=self.webpackChunkopensource_website||[]).push([[8285],{6679:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/nope-js-browser","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

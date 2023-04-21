@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkopensource_website=self.webpackChunkopensource_website||[]).push([[9270],{7180:e=>{e.exports=JSON.parse('{"label":"nope-js-browser","permalink":"/blog/tags/nope-js-browser","allTagsPath":"/blog/tags","count":4}')}}]);

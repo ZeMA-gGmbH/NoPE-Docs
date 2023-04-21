@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>NoPE Blog</title>
-        <link>https://github.io/blog</link>
+        <link>https://github.io/NoPE-Docs/blog</link>
         <description>NoPE Blog</description>
         <lastBuildDate>Fri, 21 Apr 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Realease version 1.7.1]]></title>
-            <link>https://github.io/blog/release-1-7-1</link>
-            <guid>https://github.io/blog/release-1-7-1</guid>
+            <link>https://github.io/NoPE-Docs/blog/release-1-7-1</link>
+            <guid>https://github.io/NoPE-Docs/blog/release-1-7-1</guid>
             <pubDate>Fri, 21 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Today we have release our new version with the following changes:]]></description>
             <content:encoded><![CDATA[<p>Today we have release our new version with the following changes:</p><ul><li><p>Modifications:</p><ul><li><p><code>NopeRpcManager</code>: </p><ul><li><p>listens on <code>bonjour</code>-messages</p></li><li><div class="theme-admonition theme-admonition-danger alert alert--danger admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>Braking Change:</div><div class="admonitionContent_S0QG"><p>RPC - Manager: <code>registerService</code> is now async! (see <code>INopeInstanceManager</code> as well)</p></div></div></li></ul></li><li><p><code>NopeInstanceManager</code>:    </p><ul><li>listens on <code>bonjour</code>-messages</li></ul></li><li><p><code>getDispatcher</code>:</p><ul><li>The method uses a logger now. It will render the errors.</li></ul></li></ul></li><li><p>Fixes:</p><ul><li><code>NopeInstanceManager</code>:<ul><li>fixing <code>instanceExists</code>      </li><li><code>registerInstance</code> now emits the instances</li></ul></li><li><code>PubSubSystemBase</code>:<ul><li>fixed the internal matching structure</li><li>fixed <code>updateMatching</code></li><li>fided <code>_notify</code>: The <code>dataQuery</code> only considers the events that have been published during notification!</li></ul></li><li><code>templates</code>:<ul><li>Fixing Typescript-Templates (still had some old 'nope' references)</li></ul></li><li>fixed tpyos in <code>00-start.md</code></li></ul></li><li><p>New Features:</p><ul><li><code>NopeInstanceManager</code> and <code>INopeInstanceManager</code>:<ul><li>Added method <code>generateWrapper</code>. That allows to create Wrappers for <strong>static</strong> added instances (via. <code>registerInstance</code>)</li></ul></li><li><code>helpers.comparePatternAndPath</code>: <ul><li>Fixing issues during path comparing!</li></ul></li><li><strong>Tutorials</strong> (juypter-notebooks) for <ul><li>dataDistributor</li><li>rpcManager</li><li>InstanceManagers</li><li>Plugins</li><li>eventDistributor</li></ul></li></ul></li></ul><p>Update your version on npm.js</p>]]></content:encoded>
@@ -22,8 +22,8 @@
         </item>
         <item>
             <title><![CDATA[Realease version 1.7.0]]></title>
-            <link>https://github.io/blog/release-1-7-0</link>
-            <guid>https://github.io/blog/release-1-7-0</guid>
+            <link>https://github.io/NoPE-Docs/blog/release-1-7-0</link>
+            <guid>https://github.io/NoPE-Docs/blog/release-1-7-0</guid>
             <pubDate>Wed, 19 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Today we have release our new version with the following changes:]]></description>
             <content:encoded><![CDATA[<p>Today we have release our new version with the following changes:</p><ul><li><p>Modifications:</p><ul><li><p>removing <code>getLinkedDispatcher</code> this functionality is now added in the default <code>getDispatcher</code> method.</p></li><li><p>Changing the templates for the public release. This contains some small fixes to run with the public version</p></li><li><div class="theme-admonition theme-admonition-danger alert alert--danger admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>Braking Change:</div><div class="admonitionContent_S0QG"><p>RPC - Manager raises an Error if a service already has been added.</p></div></div></li></ul></li><li><p>Fixes:</p><ul><li>fixing <code>nope-js interact</code>. executing service works correct now.<ul><li>adding the possibility to execute <code>base services</code></li></ul></li><li>fixing templates of <code>nope-js project</code></li></ul></li><li><p>New Features:</p><ul><li>The RpcManager now has the function <code>isProviding</code> to test, whether a service has been provided by that RpcManager</li></ul></li></ul>]]></content:encoded>
@@ -34,19 +34,19 @@
         </item>
         <item>
             <title><![CDATA[Tutorials and API]]></title>
-            <link>https://github.io/blog/tutorials-release</link>
-            <guid>https://github.io/blog/tutorials-release</guid>
+            <link>https://github.io/NoPE-Docs/blog/tutorials-release</link>
+            <guid>https://github.io/NoPE-Docs/blog/tutorials-release</guid>
             <pubDate>Wed, 19 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[We are proud to announce, that we have successfully created our first tutorial and integrated our api docs on this page.]]></description>
-            <content:encoded><![CDATA[<p>We are proud to announce, that we have successfully created our first tutorial and integrated our api docs on this page.</p><p>Checkout our new <a href="/docs/category/3-tutorial---handson">5 min Tutorials</a> to get an idea hot to start using <code>NoPE</code>.</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>We are proud to announce, that we have successfully created our first tutorial and integrated our api docs on this page.</p><p>Checkout our new <a href="/NoPE-Docs/docs/category/3-tutorial---handson">5 min Tutorials</a> to get an idea hot to start using <code>NoPE</code>.</p>]]></content:encoded>
             <category>nope-js-node</category>
             <category>nope-js-browser</category>
             <category>tutorials</category>
         </item>
         <item>
             <title><![CDATA[Public Release 🎉]]></title>
-            <link>https://github.io/blog/public-release</link>
-            <guid>https://github.io/blog/public-release</guid>
+            <link>https://github.io/NoPE-Docs/blog/public-release</link>
+            <guid>https://github.io/NoPE-Docs/blog/public-release</guid>
             <pubDate>Tue, 18 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[NoPE is now officially online on npmjs.com please look at https://www.npmjs.com/package/nope-js-node]]></description>
             <content:encoded><![CDATA[<p><code>NoPE</code> is now officially online on <a href="https://www.npmjs.com/package/nope-js-node" target="_blank" rel="noopener noreferrer">npmjs.com</a> please look at <a href="https://www.npmjs.com/package/nope-js-node" target="_blank" rel="noopener noreferrer">https://www.npmjs.com/package/nope-js-node</a></p><p>You are now able to find ous on <a href="https://www.npmjs.com/package/nope-js-node" target="_blank" rel="noopener noreferrer">npmjs.com</a> and install <code>nope-js</code> using the default npm package manager.</p><div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">npm</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">install</span><span class="token plain"> -g nope-js-node</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>

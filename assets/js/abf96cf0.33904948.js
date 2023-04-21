@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkopensource_website=self.webpackChunkopensource_website||[]).push([[993],{2894:e=>{e.exports=JSON.parse('{"permalink":"/NoPE-Docs/blog/tags/npm","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

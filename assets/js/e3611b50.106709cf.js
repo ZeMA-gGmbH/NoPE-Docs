@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkopensource_website=self.webpackChunkopensource_website||[]).push([[2012],{1644:e=>{e.exports=JSON.parse('{"label":"nope-js-browser","permalink":"/NoPE-Docs/blog/tags/nope-js-browser","allTagsPath":"/NoPE-Docs/blog/tags","count":4}')}}]);
